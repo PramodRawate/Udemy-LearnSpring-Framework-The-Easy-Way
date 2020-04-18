@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans 
+    http://www.springframework.org/schema/beans/spring-beans.xsd">
+    
+    <!-- Every class/component is called as bean in Spring Framework. Spring Managed dependencies are called as Beans. 
+    	 Id = identifier for the class.
+    	 class = className -->
+    <bean id = "dog" class = "springDI.Dog">
+    </bean>
+    
+    <bean id = "cat" class = "springDI.Cat">
+    </bean>
+
+    <bean id= "bean" class = "springDI.Bean">
+    	<constructor-arg ref = "dog"/>
+    </bean>
+    
+  </beans>

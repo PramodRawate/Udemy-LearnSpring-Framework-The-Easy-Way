@@ -1,0 +1,28 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+    <groupId>com.pramod.udemylearning</groupId>
+    <artifactId>spring-core-framework-the-easy-way</artifactId>
+    <version>0.1</version>
+	
+	<dependencies>
+		<!--  Provides all the spring core Functionalities.  -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-core</artifactId>
+			<version>5.2.5.RELEASE</version>
+		</dependency>
+		
+		<!--  Allows us to create Spring application Context.  
+			  Is dependent on Spring core. SO if spring core is not given, it will be automatically downloaded/added due to below dependency-->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-context</artifactId>
+			<version>5.2.5.RELEASE</version>
+		</dependency>
+		<dependency>
+		    <groupId>org.springframework</groupId>
+		    <artifactId>spring-expression</artifactId>
+		    <version>4.3.12.RELEASE</version>
+		</dependency>
+	</dependencies>
+</project>
