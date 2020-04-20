@@ -1,7 +1,9 @@
 package springDI;
 
 import org.springframework.context.ApplicationContext;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+
+import config.JavaConfig;
 
 public class App {
 
@@ -12,9 +14,13 @@ public class App {
 		 * it also identifies the dependencies required by the classes and injects the dependencies.
 		 */
 		try {
-			ApplicationContext context = new ClassPathXmlApplicationContext("Config.xml");
+			//Bean using xml Config
+			//ApplicationContext context = new ClassPathXmlApplicationContext("Config.xml");
+			//AnimalBean bean = (AnimalBean) context.getBean("animalBean");
 			
-			Bean bean = (Bean) context.getBean("bean");
+			//Bean using Java COnfig
+			ApplicationContext context = new AnnotationConfigApplicationContext(JavaConfig.class);
+			AnimalBean bean = (AnimalBean) context.getBean("animalBean");
 			bean.shout();
 		}
 		catch(Exception e) {

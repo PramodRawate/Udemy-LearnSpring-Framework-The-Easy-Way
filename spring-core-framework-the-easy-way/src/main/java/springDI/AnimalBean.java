@@ -1,10 +1,14 @@
 package springDI;
 
-public class Bean {
+public class AnimalBean {
 	
 	private Animal animal;
 	
-	Bean(Animal animal) {
+	AnimalBean() {
+		
+	}
+	
+	public AnimalBean(Animal animal) {
 		this.animal = animal;
 	}
 	

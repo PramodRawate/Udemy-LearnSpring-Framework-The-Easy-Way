@@ -12,9 +12,9 @@
     
     <bean id = "cat" class = "springDI.Cat">
     </bean>
-
-    <bean id= "bean" class = "springDI.Bean">
-    	<constructor-arg ref = "dog"/>
+    
+    <bean id= "animalBean" class = "springDI.AnimalBean">
+    	<constructor-arg ref = "cat"/>
     </bean>
     
   </beans>
