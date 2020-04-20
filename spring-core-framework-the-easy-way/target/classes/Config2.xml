@@ -11,7 +11,7 @@
     <import resource="Config.xml"/>
     
     <bean id= "animalBean" class = "springDI.AnimalBean">
-    	<constructor-arg ref = "cat"/>
+    	<constructor-arg ref = "dog"/>
     </bean>
     
   </beans>
