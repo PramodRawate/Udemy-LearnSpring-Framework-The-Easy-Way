@@ -13,8 +13,4 @@
     <bean id = "cat" class = "springDI.Cat">
     </bean>
     
-    <bean id= "animalBean" class = "springDI.AnimalBean">
-    	<constructor-arg ref = "cat"/>
-    </bean>
-    
   </beans>

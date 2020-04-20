@@ -6,11 +6,12 @@
     
     <!-- Every class/component is called as bean in Spring Framework. Spring Managed dependencies are called as Beans. 
     	 Id = identifier for the class.
-    	 class = className -->
-    <bean id = "dog" class = "springDI.Dog">
-    </bean>
+    	 class = className -->    
+    	 
+    <import resource="Config.xml"/>
     
-    <bean id = "cat" class = "springDI.Cat">
+    <bean id= "animalBean" class = "springDI.AnimalBean">
+    	<constructor-arg ref = "cat"/>
     </bean>
     
   </beans>
