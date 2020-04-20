@@ -2,13 +2,13 @@ package config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.ImportResource;
+import org.springframework.context.annotation.Import;
 
 import springDI.Animal;
 import springDI.AnimalBean;
 
 @Configuration
-@ImportResource("classpath:Config2.xml")
+@Import(JavaConfig2.class)
 public class JavaConfig {
 	
 	@Bean

@@ -1,17 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:context="http://www.springframework.org/schema/context"
     xsi:schemaLocation="http://www.springframework.org/schema/beans 
-    http://www.springframework.org/schema/beans/spring-beans.xsd">
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context-3.0.xsd ">
     
     <!-- Every class/component is called as bean in Spring Framework. Spring Managed dependencies are called as Beans. 
     	 Id = identifier for the class.
     	 class = className -->    
-    	 
-    <import resource="Config.xml"/>
+    <context:annotation-config/>    	 
+    <!-- <import resource="Config.xml"/>  -->
+    
+    <bean id = "dog" class = "config.JavaConfig2">
+    </bean>
     
     <bean id= "animalBean" class = "springDI.AnimalBean">
-    	<constructor-arg ref = "dog"/>
+    	<constructor-arg ref = "animal"/>
     </bean>
     
   </beans>
