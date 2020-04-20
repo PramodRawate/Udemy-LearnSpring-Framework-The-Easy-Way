@@ -1,7 +1,9 @@
 package springDI;
 
 import org.springframework.context.ApplicationContext;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+
+import config.JavaConfig;
 
 public class App {
 
@@ -13,12 +15,12 @@ public class App {
 		 */
 		try {
 			//Bean using xml Config
-			ApplicationContext context = new ClassPathXmlApplicationContext("Config2.xml");
-			AnimalBean bean = (AnimalBean) context.getBean("animalBean");
+			//ApplicationContext context = new ClassPathXmlApplicationContext("Config2.xml");
+			//AnimalBean bean = (AnimalBean) context.getBean("animalBean");
 			
 			//Bean using Java COnfig
-			//ApplicationContext context = new AnnotationConfigApplicationContext(JavaConfig.class);
-			//AnimalBean bean = (AnimalBean) context.getBean("animalBean");
+			ApplicationContext context = new AnnotationConfigApplicationContext(JavaConfig.class);
+			AnimalBean bean = (AnimalBean) context.getBean("animalBean");
 			
 			bean.shout();
 		}

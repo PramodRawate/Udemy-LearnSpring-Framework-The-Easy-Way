@@ -2,22 +2,18 @@ package config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Import;
 
+import springDI.Animal;
 import springDI.AnimalBean;
-import springDI.Cat;
-import springDI.Dog;
 
 @Configuration
+@Import(JavaConfig2.class)
 public class JavaConfig {
 	
 	@Bean
-    public Dog dog() {
-    	return new Dog();
-    }
-	
-	@Bean
-	public AnimalBean animalBean() {
-		return new AnimalBean(new Dog());
+	public AnimalBean animalBean(Animal animal) {
+		return new AnimalBean(animal);
 	}
 	
 }
