@@ -34,7 +34,7 @@
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="/Volumes/Pradeep-HD/Pramod-Workspace/Spring Core Framework The Easy Way/apiimlementors.jar"/>
 	<classpathentry kind="lib" path="/Volumes/Pradeep-HD/Pramod-Workspace/Spring Core Framework The Easy Way/trustedCompany.jar"/>
+	<classpathentry kind="lib" path="/Volumes/Pradeep-HD/Pramod-Workspace/Spring Core Framework The Easy Way/apiimlementors.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

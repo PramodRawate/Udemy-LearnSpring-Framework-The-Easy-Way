@@ -17,20 +17,27 @@ public class Config {
 	@Bean
 	public SecureStoreAccessImpl secureStoreAccessImpl()
 	{		
-		int accoudId = 100;
+		int accountId = 100;
 		String username = "pramod";
 		String password = "rawate";
-		List<String> servers = Arrays.asList("10.11.12.13","20.21.22.23","30.31.32.33");
+		List<String> serverlist = Arrays.asList("10.11.12.13","20.21.22.23","30.31.32.33");
 		Map<String, String> configParams = new HashMap<String,String>();	
 		configParams.put("cores", "2");
 		configParams.put("ram", "16gb");
 		configParams.put("disk", "1TB");
 		
-		return new SecureStoreAccessImpl(accoudId, username, password, servers, configParams);
+		SecureStoreAccessImpl secureStoreAccessImpl = new SecureStoreAccessImpl();
+		secureStoreAccessImpl.setAccountId(accountId);
+		secureStoreAccessImpl.setUsername(username);
+		secureStoreAccessImpl.setPassword(password);
+		secureStoreAccessImpl.setServerlist(serverlist);
+		secureStoreAccessImpl.setConfigParams(configParams);
+
+		return secureStoreAccessImpl;
 	}	
 
 	@Bean
-	public ManageAppData manageAppData() {
+	public ManageAppData manageAppData(SecureStoreAccessImpl secureStoreAccessImpl) {
 		return new ManageAppData(secureStoreAccessImpl());
 	}
 }

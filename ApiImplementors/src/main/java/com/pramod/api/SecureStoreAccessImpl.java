@@ -12,13 +12,8 @@ public class SecureStoreAccessImpl implements SecureStoreAccess {
 	String password;
 	List<String> serverlist;
 	Map<String,String> configParams;
-
-	public SecureStoreAccessImpl(int accountId, String username, String password, List<String> serverlist, Map<String, String> configParams) {
-		this.accountId = accountId;
-		this.username = username;
-		this.password = password;
-		this.serverlist = serverlist;
-		this.configParams = configParams;
+	
+	public SecureStoreAccessImpl() {
 		
 	}
 	
@@ -42,5 +37,46 @@ public class SecureStoreAccessImpl implements SecureStoreAccess {
 	public void putData() {
 		System.out.println("Data Inserted.");
 	}
+
+	public int getAccountId() {
+		return accountId;
+	}
+
+	public void setAccountId(int accountId) {
+		this.accountId = accountId;
+	}
+
+	public String getUsername() {
+		return username;
+	}
+
+	public void setUsername(String username) {
+		this.username = username;
+	}
+
+	public String getPassword() {
+		return password;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
+	}
+
+	public List<String> getServerlist() {
+		return serverlist;
+	}
+
+	public void setServerlist(List<String> serverlist) {
+		this.serverlist = serverlist;
+	}
+
+	public Map<String, String> getConfigParams() {
+		return configParams;
+	}
+
+	public void setConfigParams(Map<String, String> configParams) {
+		this.configParams = configParams;
+	}
+	
 
 }
